@@ -1,11 +1,8 @@
-a = [12, 98, -100, 30,-10, 110,0, 44, -2]
-
-k = 0
-kk = 0
-for i in a:
-    if i >= 0:
-        k = k + 1
-for i in a:
-    if i < 0:
-        kk = kk + 1
-print(k - kk or kk - k)
+a = list(range(41,90,1))
+for e in a:
+    b =  1
+    for i in range(2,e):
+        if e % i == 0:
+            b = 0
+    if(b == 1):
+        print(e)
