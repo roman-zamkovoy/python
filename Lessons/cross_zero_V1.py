@@ -7,51 +7,60 @@ def win (a):
     if (a[0][0] == a[0][1] and a[0][1] == a[0][2]):  # СТРОКИ
         if (a[0][0] == 'x'):
             print("Игрок 1 ПОБЕДИЛ!")
+            return 1
         elif (a[0][2] == 'O'):
             print("Игрок 2 ПОБЕДИЛ!")
-        return 1
+            return 1
+
     if (a[1][0] == a[1][1] and a[1][1] == a[1][2]):
         if (a[1][0] == 'x'):
             print("Игрок 1 ПОБЕДИЛ!")
-        elif (a[0][2] == 'O'):
+            return 1
+        elif (a[1][2] == 'O'):
             print("Игрок 2 ПОБЕДИЛ!")
-        return 1
+            return 1
     if (a[2][0] == a[2][1] and a[2][1] == a[2][2]):
         if (a[2][0] == 'x'):
             print("Игрок 1 ПОБЕДИЛ!")
-        elif (a[0][2] == 'O'):
+            return 1
+        elif (a[2][2] == 'O'):
             print("Игрок 2 ПОБЕДИЛ!")
-        return 1
+            return 1
     if (a[0][0] == a[1][1] and a[1][1] == a[2][2]):  # ДИАГОНАЛИ
         if (a[0][0] == 'x'):
             print("Игрок 1 ПОБЕДИЛ!")
-        elif (a[0][2] == 'O'):
+            return 1
+        elif (a[2][2] == 'O'):
             print("Игрок 2 ПОБЕДИЛ!")
-        return 1
+            return 1
     if (a[0][2] == a[1][1] and a[1][1] == a[2][0]):
         if (a[0][2] == 'x'):
             print("Игрок 1 ПОБЕДИЛ!")
+            return 1
         elif (a[0][2] == 'O'):
             print("Игрок 2 ПОБЕДИЛ!")
-        return 1
+            return 1
     if (a[0][0] == a[1][0] and a[1][0] == a[2][0]):  # СТОЛБЦЫ
         if (a[0][0] == 'x'):
             print("Игрок 1 ПОБЕДИЛ!")
-        elif (a[0][2] == 'O'):
+            return 1
+        elif (a[1][0] == 'O'):
             print("Игрок 2 ПОБЕДИЛ!")
-        return 1
+            return 1
     if (a[0][1] == a[1][1] and a[1][1] == a[2][1]):
         if (a[0][1] == 'x'):
             print("Игрок 1 ПОБЕДИЛ!")
-        elif (a[0][2] == 'O'):
+            return 1
+        elif (a[1][1] == 'O'):
             print("Игрок 2 ПОБЕДИЛ!")
-        return 1
+            return 1
     if (a[0][2] == a[1][2] and a[1][2] == a[2][2]):
         if (a[0][2] == 'x'):
             print("Игрок 1 ПОБЕДИЛ!")
+            return 1
         elif(a[0][2] == 'O'):
             print("Игрок 2 ПОБЕДИЛ!")
-        return 1
+            return 1
     return 0
 
 
