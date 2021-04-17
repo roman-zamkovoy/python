@@ -6,9 +6,9 @@ def lose(a):
     for i in range(3):
         if (a[i][0] == "x" and a[i][1] == "x" and a[i][2] == "_"):  # СТРОКа
             return 1
-        if (a[i][0] == "x" and a[i][2] == "_" and a[i][2] == "x"):  # СТРОКа
+        if (a[i][0] == "x" and a[i][1] == "_" and a[i][2] == "x"):  # СТРОКа
             return 1
-        if (a[i][1] == "_" and a[i][2] == "x" and a[i][2] == "x"):  # СТРОКа
+        if (a[i][1] == "_" and a[i][1] == "x" and a[i][2] == "x"):  # СТРОКа
             return 1
     # ДЗ - сделать такую же проверку по столбцам и ДИАГОНАЛЯМ
 
