@@ -6,3 +6,9 @@ def print_m(a):
         print(a[i][j], end=" ")
     print()
 print_m(a)
+
+
+
+
+
+[]
