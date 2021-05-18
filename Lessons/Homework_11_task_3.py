@@ -6,3 +6,9 @@ for i in range(len(a)):
     sum += a[i][j]
 print(sum)
 
+
+
+
+
+
+
