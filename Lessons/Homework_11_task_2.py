@@ -1,8 +1,13 @@
-a = [[1,2,1],[3,2,2],[0,2,0]]
 count = 0
+max = 0  
+for i in range(1016, 7938, 1):
+    if i % 3 == 0 and i % 7 != 0 and i % 17 != 0 and i % 19 != 0 and i % 27 != 0:
+       count += 1
+       if i > max:
+           max = i
+print(count,max)
 
-for i in range(len(a)):
-  for j in range(len(a)):
-    if a[i][j] == 1:
-      count += 1
-print(count)
+
+
+
+
