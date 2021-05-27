@@ -1,16 +1,13 @@
-a = [[1,2,3],[3,2,2],[1,2,1]]
+a = [[1,2,3,5],[3,2,2,8],[1,2,1,7],[2,7,5,3]]
 
 for i in range(len(a)):
   for j in range(len(a)):
-    if(a[i][j] % 2 == 0):
-      a[i][j] += 1
-    elif(a[i][j] % 2 != 0):
-      a[i][j] -= 1
+    if(i < j):
+      a[i][j] *= -1
+    print()
 def print_m(a):
   for i in range(len(a)):
     for j in range(len(a)):
         print(a[i][j], end=" ")
     print()
 print_m(a)
-
-
