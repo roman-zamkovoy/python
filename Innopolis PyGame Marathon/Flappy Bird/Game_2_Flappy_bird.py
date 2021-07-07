@@ -53,10 +53,16 @@ def score_display(game_state):
         screen.blit(score_surface, score_rect)
 
         height_score_surface = game_font.render(f'Height Score: {height_score}', True, (225, 225, 225))
-        height_score_rect = score_surface.get_rect(center = (140, 425))
+        height_score_rect = score_surface.get_rect(center = (1, 425))
         screen.blit(height_score_surface, height_score_rect)
 
-pygame.init()
+def score_updaite(score, height_score):
+    if score > height_score:
+        height_score = score
+    return height_score
+
+
+pygame.init() 
 # если окно слишком большое - дробите надвое
 screen = pygame.display.set_mode((288, 512))
 # 576, 1024 делайте 288, 512
@@ -117,6 +123,7 @@ while True:
                 pipe_list.clear()
                 bird_rect.center = (100, 512)
                 bird_movement = 0
+                score = 0
         if event.type == SPAWNPIPE:
             pipe_list.extend(create_pipe())
         if event.type == BIRDFLAP:
@@ -144,6 +151,7 @@ while True:
         score += 0.01
         score_display('main_game')
     else:
+        height_score = score_updaite(score, height_score)
         score_display('game_over')
 
     # земля + движение земли
@@ -155,4 +163,3 @@ while True:
 
     pygame.display.update()
     clock.tick(120)
-    # 4 час
