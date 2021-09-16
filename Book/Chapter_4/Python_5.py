@@ -5,5 +5,8 @@ def double(arg):
 
 def change(arg: list):
     print('before')
-    arg.append('More data')
+    arg.append('123242y867736')
     print('After: ', arg)
+
+
+change([1, 2, 3])
