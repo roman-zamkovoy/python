@@ -12,6 +12,6 @@ for i in range(5):
     if right_this_minute in odds:
         print("This minute seems a little odd.")
     else:
-        print("Not an odd minute.")
+        print("Not an odd minute.")                   
     wait_time = random.randint(1, 60)
     time.sleep(wait_time)
